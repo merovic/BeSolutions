@@ -30,6 +30,7 @@ public class OneActivity extends AppCompatActivity implements NetworkInterface {
         setContentView(R.layout.activity_one);
         //Amr 
         ButterKnife.bind(this);
+        //alla
 
         tinyDB = new TinyDB(this);
 
