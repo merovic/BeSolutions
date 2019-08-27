@@ -7,9 +7,11 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.android.volley.VolleyError;
+import com.besolutions.standard.NetworkLayer.Apicalls;
 import com.besolutions.standard.NetworkLayer.NetworkInterface;
 import com.besolutions.standard.NetworkLayer.ResponseModel;
 import com.besolutions.standard.R;
+import com.besolutions.standard.Utils.MyUtilFile;
 import com.besolutions.standard.Utils.TinyDB;
 
 import butterknife.BindView;
@@ -32,10 +34,15 @@ public class OneActivity extends AppCompatActivity implements NetworkInterface {
         ButterKnife.bind(this);
         //alla
 
+        //Amir
+
         tinyDB = new TinyDB(this);
 
         // Generate --> Generate butterknife injection
 
+        new Apicalls(this,this).loginUser("email@mail.com","123123");
+
+        new MyUtilFile(this).showMessage("ajshdvjahsbdh");
     }
 
     @OnClick(R.id.button1)
@@ -44,8 +51,10 @@ public class OneActivity extends AppCompatActivity implements NetworkInterface {
 
     }
 
+
     @Override
     public void OnStart() {
+
 
     }
 
@@ -54,15 +63,16 @@ public class OneActivity extends AppCompatActivity implements NetworkInterface {
 
         switch (model.getResponseCode())
         {
-            case 0:
             case 1:
-
+                //sfsdfsdf
+            case 5:
+                //dfhdfhdfhd
         }
-
     }
 
     @Override
     public void OnError(VolleyError error) {
+
 
     }
 }

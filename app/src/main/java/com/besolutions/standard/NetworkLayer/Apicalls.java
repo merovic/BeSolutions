@@ -30,7 +30,7 @@ public class Apicalls {
 
     public void loginUser(final String email, final String pass) {
 
-        apiRouter.performRequest(Apiclient.LOGIN_USER.getURL(),Apiclient.LOGIN_USER.getParams(),Arrays.asList(email,pass), Request.Method.POST,0);
+        apiRouter.performRequest(Apiclient.LOGIN_USER.getURL(),Apiclient.LOGIN_USER.getParams(),Arrays.asList(email,pass), Request.Method.POST,Apiclient.LOGIN_USER.getCode());
 
     }
 
@@ -45,7 +45,7 @@ public class Apicalls {
 
     public void loginInvestor(final String email, final String pass) {
 
-        apiRouter.performRequest(Apiclient.LOGIN_INVESTOR.getURL(),Apiclient.LOGIN_INVESTOR.getParams(),Arrays.asList(email,pass), Request.Method.POST,1);
+        apiRouter.performRequest(Apiclient.LOGIN_INVESTOR.getURL(),Apiclient.LOGIN_INVESTOR.getParams(),Arrays.asList(email,pass), Request.Method.POST,Apiclient.LOGIN_INVESTOR.getCode());
 
     }
 
@@ -59,7 +59,7 @@ public class Apicalls {
 
     public void insertUser(final String Name, final String Email, final String Password, final String Age, final String Gender, final String Work, final String Mobile, final String Images, final String Identification, final String Account_statement) {
 
-        apiRouter.performRequest(Apiclient.INSERT_USER.getURL(),Apiclient.INSERT_USER.getParams(),Arrays.asList(Name,Email,Password,Age,Gender,Work,Mobile,Images,Identification,Account_statement), Request.Method.POST,2);
+        apiRouter.performRequest(Apiclient.INSERT_USER.getURL(),Apiclient.INSERT_USER.getParams(),Arrays.asList(Name,Email,Password,Age,Gender,Work,Mobile,Images,Identification,Account_statement), Request.Method.POST,Apiclient.INSERT_USER.getCode());
 
     }
 
@@ -73,7 +73,7 @@ public class Apicalls {
 
     public void insertInvestor(final String Name, final String Email, final String Password, final String Age, final String Gender, final String Work, final String Mobile, final String Images) {
 
-        apiRouter.performRequest(Apiclient.INSERT_INVESTOR.getURL(),Apiclient.INSERT_INVESTOR.getParams(),Arrays.asList(Name,Email,Password,Age,Gender,Work,Mobile,Images), Request.Method.POST,3);
+        apiRouter.performRequest(Apiclient.INSERT_INVESTOR.getURL(),Apiclient.INSERT_INVESTOR.getParams(),Arrays.asList(Name,Email,Password,Age,Gender,Work,Mobile,Images), Request.Method.POST,Apiclient.INSERT_INVESTOR.getCode());
 
     }
 
@@ -87,7 +87,7 @@ public class Apicalls {
 
     public void requestProduct(final String id_user, final String id_product, final String id_investor, final String date, final String status, final String cost, final String day, final String mouth, final String year, final String numberitems) {
 
-        apiRouter.performRequest(Apiclient.REQUEST_PRODUCT.getURL(),Apiclient.REQUEST_PRODUCT.getParams(),Arrays.asList(id_user,id_product,id_investor,date,status,cost,day,mouth,year,numberitems), Request.Method.POST,4);
+        apiRouter.performRequest(Apiclient.REQUEST_PRODUCT.getURL(),Apiclient.REQUEST_PRODUCT.getParams(),Arrays.asList(id_user,id_product,id_investor,date,status,cost,day,mouth,year,numberitems), Request.Method.POST,Apiclient.REQUEST_PRODUCT.getCode());
 
     }
 
@@ -102,7 +102,7 @@ public class Apicalls {
 
     public void selectInvestors(final String id_member) {
 
-        apiRouter.performRequest(Apiclient.SELECT_INVESTORS.getURL(),Apiclient.SELECT_INVESTORS.getParams(),Collections.singletonList(id_member), Request.Method.POST,5);
+        apiRouter.performRequest(Apiclient.SELECT_INVESTORS.getURL(),Apiclient.SELECT_INVESTORS.getParams(),Collections.singletonList(id_member), Request.Method.POST,Apiclient.SELECT_INVESTORS.getCode());
 
     }
 
@@ -116,7 +116,7 @@ public class Apicalls {
 
     public void selectProducts(final String id_member) {
 
-        apiRouter.performRequest(Apiclient.SELECT_PRODUCTS.getURL(),Apiclient.SELECT_PRODUCTS.getParams(),Collections.singletonList(id_member), Request.Method.POST,6);
+        apiRouter.performRequest(Apiclient.SELECT_PRODUCTS.getURL(),Apiclient.SELECT_PRODUCTS.getParams(),Collections.singletonList(id_member), Request.Method.POST,Apiclient.SELECT_PRODUCTS.getCode());
 
     }
 
@@ -130,7 +130,7 @@ public class Apicalls {
 
     public void selectAdv1() {
 
-        apiRouter.performRequest(Apiclient.SELECT_ADV_1.getURL(),Apiclient.SELECT_ADV_1.getParams(),null, Request.Method.POST,16);
+        apiRouter.performRequest(Apiclient.SELECT_ADV_1.getURL(),Apiclient.SELECT_ADV_1.getParams(),null, Request.Method.POST,Apiclient.SELECT_ADV_4.getCode());
 
     }
 
@@ -144,7 +144,7 @@ public class Apicalls {
 
     public void selectAdv2() {
 
-        apiRouter.performRequest(Apiclient.SELECT_ADV_2.getURL(),Apiclient.SELECT_ADV_2.getParams(),null, Request.Method.POST,17);
+        apiRouter.performRequest(Apiclient.SELECT_ADV_2.getURL(),Apiclient.SELECT_ADV_2.getParams(),null, Request.Method.POST,Apiclient.SELECT_ADV_4.getCode());
 
     }
 
@@ -158,7 +158,7 @@ public class Apicalls {
 
     public void selectAdv3() {
 
-        apiRouter.performRequest(Apiclient.SELECT_ADV_3.getURL(),Apiclient.SELECT_ADV_3.getParams(),null, Request.Method.POST,18);
+        apiRouter.performRequest(Apiclient.SELECT_ADV_3.getURL(),Apiclient.SELECT_ADV_3.getParams(),null, Request.Method.POST,Apiclient.SELECT_ADV_4.getCode());
 
     }
 
@@ -172,7 +172,7 @@ public class Apicalls {
 
     public void selectAdv4() {
 
-        apiRouter.performRequest(Apiclient.SELECT_ADV_4.getURL(),Apiclient.SELECT_ADV_4.getParams(),null, Request.Method.POST,19);
+        apiRouter.performRequest(Apiclient.SELECT_ADV_4.getURL(),Apiclient.SELECT_ADV_4.getParams(),null, Request.Method.POST,Apiclient.SELECT_ADV_4.getCode());
 
     }
 
@@ -187,7 +187,7 @@ public class Apicalls {
 
     public void selectMyRequests(final String id_user) {
 
-        apiRouter.performRequest(Apiclient.SELECT_MY_REQUESTS.getURL(),Apiclient.SELECT_MY_REQUESTS.getParams(), Collections.singletonList(id_user), Request.Method.POST,7);
+        apiRouter.performRequest(Apiclient.SELECT_MY_REQUESTS.getURL(),Apiclient.SELECT_MY_REQUESTS.getParams(), Collections.singletonList(id_user), Request.Method.POST,Apiclient.SELECT_MY_REQUESTS.getCode());
 
     }
 
@@ -202,7 +202,7 @@ public class Apicalls {
 
     public void updateUser(final String id,final String Name, final String Email, final String Password, final String Age, final String Gender, final String Work, final String Mobile, final String Images, final String Identification, final String Account_statement) {
 
-        apiRouter.performRequest(Apiclient.INSERT_USER.getURL(),Apiclient.INSERT_USER.getParams(),Arrays.asList(id,Name,Email,Password,Age,Gender,Work,Mobile,Images,Identification,Account_statement), Request.Method.POST,8);
+        apiRouter.performRequest(Apiclient.INSERT_USER.getURL(),Apiclient.INSERT_USER.getParams(),Arrays.asList(id,Name,Email,Password,Age,Gender,Work,Mobile,Images,Identification,Account_statement), Request.Method.POST,Apiclient.INSERT_USER.getCode());
 
     }
 
@@ -216,7 +216,7 @@ public class Apicalls {
 
     public void updateInvestor(final String id,final String Name, final String Email, final String Password, final String Age, final String Gender, final String Work, final String Mobile, final String Images) {
 
-        apiRouter.performRequest(Apiclient.INSERT_INVESTOR.getURL(),Apiclient.INSERT_INVESTOR.getParams(),Arrays.asList(id,Name,Email,Password,Age,Gender,Work,Mobile,Images), Request.Method.POST,9);
+        apiRouter.performRequest(Apiclient.INSERT_INVESTOR.getURL(),Apiclient.INSERT_INVESTOR.getParams(),Arrays.asList(id,Name,Email,Password,Age,Gender,Work,Mobile,Images), Request.Method.POST,Apiclient.INSERT_INVESTOR.getCode());
 
     }
 
@@ -230,7 +230,7 @@ public class Apicalls {
 
     public void insertProduct(final String Title,final String Images, final String Price, final String Price_Agaal, final String Details, final String id_member, final String number) {
 
-        apiRouter.performRequest(Apiclient.INSERT_PRODUCT.getURL(),Apiclient.INSERT_PRODUCT.getParams(),Arrays.asList(Title,Images,Price,Price_Agaal,Details,id_member,number), Request.Method.POST,10);
+        apiRouter.performRequest(Apiclient.INSERT_PRODUCT.getURL(),Apiclient.INSERT_PRODUCT.getParams(),Arrays.asList(Title,Images,Price,Price_Agaal,Details,id_member,number), Request.Method.POST,Apiclient.INSERT_PRODUCT.getCode());
 
     }
 
@@ -244,7 +244,7 @@ public class Apicalls {
 
     public void selectMyRequestsInvestor(final String id_investor) {
 
-        apiRouter.performRequest(Apiclient.SELECT_MY_REQUESTS_INVESTOR.getURL(),Apiclient.SELECT_MY_REQUESTS_INVESTOR.getParams(), Collections.singletonList(id_investor), Request.Method.POST,11);
+        apiRouter.performRequest(Apiclient.SELECT_MY_REQUESTS_INVESTOR.getURL(),Apiclient.SELECT_MY_REQUESTS_INVESTOR.getParams(), Collections.singletonList(id_investor), Request.Method.POST,Apiclient.SELECT_MY_REQUESTS_INVESTOR.getCode());
 
     }
 
@@ -258,7 +258,7 @@ public class Apicalls {
 
     public void selectUser(final String id_user) {
 
-        apiRouter.performRequest(Apiclient.SELECT_USER.getURL(),Apiclient.SELECT_USER.getParams(),Collections.singletonList(id_user), Request.Method.POST,12);
+        apiRouter.performRequest(Apiclient.SELECT_USER.getURL(),Apiclient.SELECT_USER.getParams(),Collections.singletonList(id_user), Request.Method.POST,Apiclient.SELECT_USER.getCode());
 
     }
 
@@ -272,7 +272,7 @@ public class Apicalls {
 
     public void selectInstallments(final String id_user) {
 
-        apiRouter.performRequest(Apiclient.SELECT_MY_INSTALLMENTS.getURL(),Apiclient.SELECT_MY_INSTALLMENTS.getParams(),Collections.singletonList(id_user), Request.Method.POST,13);
+        apiRouter.performRequest(Apiclient.SELECT_MY_INSTALLMENTS.getURL(),Apiclient.SELECT_MY_INSTALLMENTS.getParams(),Collections.singletonList(id_user), Request.Method.POST,Apiclient.SELECT_MY_INSTALLMENTS.getCode());
 
     }
 
@@ -287,7 +287,7 @@ public class Apicalls {
 
     public void updateInstallment(final String id,final String status) {
 
-        apiRouter.performRequest(Apiclient.UPDATE_INSTALLMENT.getURL(),Apiclient.UPDATE_INSTALLMENT.getParams(),Arrays.asList(id,status), Request.Method.POST,14);
+        apiRouter.performRequest(Apiclient.UPDATE_INSTALLMENT.getURL(),Apiclient.UPDATE_INSTALLMENT.getParams(),Arrays.asList(id,status), Request.Method.POST,Apiclient.UPDATE_INSTALLMENT.getCode());
 
     }
 
@@ -301,7 +301,7 @@ public class Apicalls {
 
     public void updateRate(final String number_rate,final String number_star,final String id_user) {
 
-        apiRouter.performRequest(Apiclient.UPDATE_RATE.getURL(),Apiclient.UPDATE_RATE.getParams(),Arrays.asList(number_rate,number_star,id_user), Request.Method.POST,15);
+        apiRouter.performRequest(Apiclient.UPDATE_RATE.getURL(),Apiclient.UPDATE_RATE.getParams(),Arrays.asList(number_rate,number_star,id_user), Request.Method.POST,Apiclient.UPDATE_RATE.getCode());
 
     }
 
