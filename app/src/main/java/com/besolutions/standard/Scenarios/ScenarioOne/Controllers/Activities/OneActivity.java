@@ -22,13 +22,13 @@ public class OneActivity extends AppCompatActivity implements NetworkInterface {
     TextView textview1;
     @BindView(R.id.button1)
     Button button1;
-
     TinyDB tinyDB;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_one);
+        //Amr 
         ButterKnife.bind(this);
 
         tinyDB = new TinyDB(this);
